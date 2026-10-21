@@ -1,5 +1,22 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BELLA OS · by LUMEN</title>
-<style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#faf5f6}iframe{display:block;border:0;width:100%;height:100%;height:100dvh}noscript{display:block;padding:30px;font-family:sans-serif}</style></head>
-<body><iframe title="BELLA OS" src="REEMPLAZAR_URL_DE_IMPLEMENTACION_APPS_SCRIPT?page=panel" allow="clipboard-write"></iframe>
-<noscript>Activa JavaScript para usar BELLA OS.</noscript></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f9e9ed">
+<title>BELLA OS · Acceso profesional</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}html,body{height:100%;margin:0}body{background:#fff9fa;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}iframe{display:block;width:100%;height:100%;height:100dvh;border:0;background:#fff9fa}.fallback{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);padding:8px 13px;border-radius:30px;background:#fff9fae8;color:#735765;font-size:11px;pointer-events:none;opacity:0;transition:opacity .3s}body.loading .fallback{opacity:1}
+</style>
+</head>
+<body class="loading">
+<!-- Fachada de GitHub Pages. Toda la lógica y los datos permanecen en Apps Script. -->
+<!-- IMPORTANTE: el panel con PIN requiere que el enlace 'Entrar' en Apps Script use target="_self" en vez de target="_top". -->
+<iframe id="bella" title="BELLA OS · Acceso profesional" src="https://script.google.com/macros/s/AKfycbx3kRILQTna2mp2NuHEF3uyC9e3xXaegbWxM5I3s_pLqVtAhmY5m6qimbwQpVVdfzXX/exec?page=panel" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals allow-downloads" allow="clipboard-write"></iframe>
+<div class="fallback" aria-hidden="true">BELLA OS · by LUMEN</div>
+<script>
+const frame=document.getElementById('bella');
+frame.addEventListener('load',()=>document.body.classList.remove('loading'));
+</script>
+</body>
+</html>
